@@ -1,0 +1,8 @@
+[
+  {
+    "id": 212,
+    "status": "failed",
+    "error": "Unexpected error: [Errno 2] No such file or directory: 'data/snapshots/scenario_0212/snapshot_073_t0365s.png'",
+    "snapshots": 73
+  }
+]
