@@ -46,20 +46,6 @@ $$
 \int_{\partial\Omega} (u_n^+) \phi v \, ds, \quad u_n^+=\max(\mathbf{u}\cdot\mathbf{n},0)
 $$
 
-## SUPG Stabilization
-
-To ensure numerical stability in advection-dominated regimes, the formulation adds a Streamline-Upwind Petrov–Galerkin (SUPG) term:
-
-$$
-\sum_{K} \int_{K} \tau (\mathbf{u}\cdot\nabla v) R(\phi) \, dx
-$$
-
-With the residual $R$:
-
-$$
-R = \frac{\phi - \phi_n}{\Delta t} + \mathbf{u}\cdot\nabla\phi - D\nabla^2\phi + k_1\phi - S
-$$
-
 ## Summary
 
 This module integrates the full ADR system with dynamic diffusion, Gaussian emissions, chemical decay, and wind-aligned outflow boundaries, stabilized via SUPG. The resulting dataset constitutes the physics-consistent reference used to train the high-speed surrogate PINN and underpins all downstream forecasting tasks.
